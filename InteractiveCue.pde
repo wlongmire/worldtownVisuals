@@ -1,6 +1,8 @@
 class InteractiveCue extends Cue {
+  
   InteractiveCue() {
     super();
+
   }
   
   void setup() {

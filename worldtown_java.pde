@@ -4,10 +4,13 @@ HashMap<Character, Cue> cues = new HashMap<Character, Cue>();
 Cue curCue = null;
 
 void setup() {
-  cues.put('1', new SpiroGraphCue());
-  cues.put('2', new GifSequenceCue("animations/torus/frame_", 0, 0, width, height, 36));
-  cues.put('3', new ImageCue("image1.png", 0, 0, width, height));
-  
+  cues.put('1', new HoopsCue());
+  cues.put('2', new MandallaCue());
+  //cues.put('3', new CrazyCurlsCue());
+  cues.put('3', new StarSystemCue());
+  cues.put('4', new TalkingHeadCue(-120, 50));
+  cues.put('5', new GifSequenceCue("animations/torus/frame_", 0, 0, width, height, 36));
+  cues.put('6', new ImageCue("image1.png", 0, 0, width, height));
   
   //set initial cue
   curCue = cues.get('1');
@@ -35,7 +38,7 @@ void keyPressed() {
 
 void keyReleased() {
   if (curCue != null)
-    curCue.keyPressed();
+    curCue.keyReleased();
 }
 
 void mouseMoved() {
